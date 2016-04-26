@@ -28,7 +28,7 @@ exports.config = {
   // Spec patterns are relative to the current working directly when
   // protractor is called.
 
-  specs: ['login_spec.js'],
+  specs: ['membership.js'],
 
 
   // Options to be passed to Jasmine.

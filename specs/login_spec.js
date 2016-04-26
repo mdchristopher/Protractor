@@ -17,18 +17,4 @@ describe('Console Login Page', function () {
         expect(browser.getTitle()).toEqual('MemberSuite - QA Test Automation Home');
     });
 
-    //it('should something something', function () {
-    //    var login = new LoginPage();
-     //   login.goTo();
-       // login.login("MattAutoTest", "MattAutoTest");
-        //expect(browser.getTitle()).toEqual('MemberSuite - QA Test Automation Home');
-
-     //   var consoleHome = new ConsoleHomePage();
-      //  consoleHome.goToModule('Events');
-
-      //  var eventsOverview = new EventsOverview();
-      //  eventsOverview.clickCreateAnEvent();
-
-   // });
-
 });

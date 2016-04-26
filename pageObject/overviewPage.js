@@ -4,6 +4,7 @@ var OverviewPage = function () {
        var xpath = "//span/span[.='{0}']"; 
        var task = element(by.xpath(xpath.replace("{0}", link)));
         task.click(); 
-    }; 
+    };
+
  };
 module.exports = OverviewPage;

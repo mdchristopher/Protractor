@@ -2,7 +2,7 @@
 <project version="4">
   <component name="JavaScriptLibraryMappings">
     <file url="file://$PROJECT_DIR$" libraries="{protractor node_modules}" />
-    <file url="PROJECT" libraries="{protractor node_modules}" />
+    <file url="PROJECT" libraries="{angular-protractor-DefinitelyTyped, angularjs-DefinitelyTyped, jasmine-DefinitelyTyped, protractor node_modules, protractor-helpers-DefinitelyTyped}" />
     <excludedPredefinedLibrary name="HTML5 / EcmaScript 5" />
   </component>
 </project>

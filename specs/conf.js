@@ -1,42 +1,72 @@
 // An example configuration file.
 
-//var HtmlReporter = require('protractor-html-screenshot-reporter')
+var HtmlScreenshotReporter = require('protractor-jasmine2-screenshot-reporter');
+
+var reporter = new HtmlScreenshotReporter({
+    dest: 'target/screenshots',
+    filename: 'my-report.html',
+    showConfiguration: true,
+    reportTitle: null
+});
+
+
 exports.config = {
-   useAllAngular2AppRoots: true,
+    useAllAngular2AppRoots: true,
     directConnect: true,
     capabilities: {
-    'browserName': 'chrome'
+        'browserName': 'chrome'
 
-  },
-/*
-  // Capabilities to be passed to the webdriver instance.
-  multiCapabilities:[ {
-    'browserName': 'firefox' },
-    {
-    'browserName': 'chrome'},
-    {
-      'browserName': 'internet explorer',
-      'platform': 'ANY',
-      'version': '11'
+    },
+    /*
+     // Capabilities to be passed to the webdriver instance.
+     multiCapabilities:[ {
+     'browserName': 'firefox' },
+     {
+     'browserName': 'chrome'},
+     {
+     'browserName': 'internet explorer',
+     'platform': 'ANY',
+     'version': '11'
 
-    }],
-*/
-  // Framework to use. Jasmine is recommended.
-  framework: 'jasmine2',
-
-
-  // Spec patterns are relative to the current working directly when
-  // protractor is called.
-
-  specs: ['membership.js'],
+     }],
+     */
+    // Framework to use. Jasmine is recommended.
+    framework: 'jasmine2',
 
 
-  // Options to be passed to Jasmine.
-  jasmineNodeOpts: {
-    onComplete: null,
-    isVerbose: true,
-    includeStackTrace: true,
-      defaultTimeoutInterval: 90000,
-    showColors: true
-  }
+    // Spec patterns are relative to the current working directly when
+    // protractor is called.
+
+    specs: ['membership.js'],
+
+
+    // Options to be passed to Jasmine.
+    jasmineNodeOpts: {
+        onComplete: null,
+        isVerbose: true,
+        includeStackTrace: true,
+        defaultTimeoutInterval: 90000,
+        showColors: true
+    },
+
+// Setup the report before any tests start
+    beforeLaunch: function () {
+        return new Promise(function (resolve) {
+            reporter.beforeLaunch(resolve);
+        });
+    },
+
+    // Assign the test reporter to each running instance
+    onPrepare: function () {
+        jasmine.getEnv().addReporter(reporter);
+    },
+
+    // Close the report after all tests finish
+    afterLaunch: function (exitCode) {
+        return new Promise(function (resolve) {
+            reporter.afterLaunch(resolve.bind(this, exitCode));
+        });
+    }
+
+
 };

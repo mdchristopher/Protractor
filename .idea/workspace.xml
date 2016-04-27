@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b41bb7f8-fb15-49d8-bfe7-c69020e190b2" name="Default" comment="Update folder structure">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pageObject/createAnOrder.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pageObject/overviewPage.js" afterPath="" />
+    <list default="true" id="b41bb7f8-fb15-49d8-bfe7-c69020e190b2" name="Default" comment="Move overViewPage.js and createAnOrder.js to Common folder">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specs/conf.js" afterPath="$PROJECT_DIR$/specs/conf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specs/membership.js" afterPath="$PROJECT_DIR$/specs/membership.js" />
     </list>
     <ignored path="protractor.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +25,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="conf.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="conf.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/specs/conf.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+            <state relative-caret-position="185">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="membership.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/specs/membership.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -45,10 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createAnOrder.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="createAnOrder.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pageObject/Orders/createAnOrder.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-435">
+            <state relative-caret-position="510">
               <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
               <folding />
             </state>
@@ -61,18 +71,6 @@
             <state relative-caret-position="540">
               <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="receiveAPayment.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pageObject/Payment/receiveAPayment.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#40#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -169,7 +167,6 @@
         <option value="$PROJECT_DIR$/pages/production_support/transaction_history/transactiondata.json" />
         <option value="$PROJECT_DIR$/example/example_spec.js" />
         <option value="$PROJECT_DIR$/example/transaction_history_spec.js" />
-        <option value="$PROJECT_DIR$/specs/conf.js" />
         <option value="$PROJECT_DIR$/pageObject/consoleHomePage.js" />
         <option value="$PROJECT_DIR$/pageObject/createAnOrder.js" />
         <option value="$PROJECT_DIR$/pageObject/overviewPage.js" />
@@ -182,6 +179,8 @@
         <option value="$PROJECT_DIR$/pageObject/Common/loginPage.js" />
         <option value="$PROJECT_DIR$/specs/example_spec.js" />
         <option value="$PROJECT_DIR$/specs/consolePayment_spec.js" />
+        <option value="$PROJECT_DIR$/specs/membership.js" />
+        <option value="$PROJECT_DIR$/specs/conf.js" />
       </list>
     </option>
   </component>
@@ -253,7 +252,39 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="specs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protractor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Protractor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="pageObject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protractor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Protractor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pageObject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CRM" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -498,7 +529,7 @@
       <workItem from="1461543858137" duration="5733000" />
       <workItem from="1461566925506" duration="284000" />
       <workItem from="1461714742582" duration="7145000" />
-      <workItem from="1461722015632" duration="1039000" />
+      <workItem from="1461722015632" duration="2260000" />
     </task>
     <task id="LOCAL-00001" summary="Initial check in of functional test for the raw offer provider page and the history transaction page&#10;">
       <created>1457107122640</created>
@@ -528,11 +559,18 @@
       <option name="project" value="LOCAL" />
       <updated>1461722138860</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Move overViewPage.js and createAnOrder.js to Common folder">
+      <created>1461723134933</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1461723134934</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14786000" />
+    <option name="totallyTimeSpent" value="16007000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -545,14 +583,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1345" y="-4" width="1615" height="1054" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20100503" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20100503" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.49748743" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5025126" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33870968" sideWeight="0.49434674" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3172043" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33870968" sideWeight="0.49434674" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3172043" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3451613" sideWeight="0.49623117" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -602,7 +640,8 @@
     <MESSAGE value="Initial check in of functional test for the raw offer provider page and the history transaction page&#10;" />
     <MESSAGE value="remove example folder&#10;" />
     <MESSAGE value="Update folder structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update folder structure" />
+    <MESSAGE value="Move overViewPage.js and createAnOrder.js to Common folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Move overViewPage.js and createAnOrder.js to Common folder" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -612,7 +651,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/example/conf.js" />
     <entry file="file://$PROJECT_DIR$/example/example_spec.js" />
     <entry file="file://$PROJECT_DIR$/pages/production_support/raw_provider/raw_provider_offer_request_pageobject.js" />
     <entry file="file://$PROJECT_DIR$/pages/production_support/raw_provider/provider.json" />
@@ -702,14 +740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/specs/conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pageObject/Payment/receiveAPayment.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -788,8 +818,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pageObject/Orders/createAnOrder.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-435">
+        <state relative-caret-position="510">
           <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/specs/membership.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/specs/conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="7" />
           <folding />
         </state>
       </provider>

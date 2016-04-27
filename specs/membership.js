@@ -1,11 +1,11 @@
-var LoginPage = require('../pageObject/loginPage.js');
-var ConsoleHomePage = require('../pageObject/consoleHomePage.js');
-var OverviewPage = require('../pageObject/overviewPage.js');
+var LoginPage = require('../pageObject/Common/loginPage.js');
+var ConsoleHomePage = require('../pageObject/Common/consoleHomePage.js');
+var OverviewPage = require('../pageObject/Common/overviewPage.js');
 var MembershipCreateSelect = require('../pageObject/Membership/membershipCreateSelect.js');
-var CreateAnIndividual = require('../pageObject/CRM/CreateAnIndividual.js');
+var CreateAnIndividual = require('../pageObject/CRM/createAnIndividual.js');
 var MembershipCreateSelectType = require('../pageObject/Membership/membershipCreateSelectType.js');
 var MembershipCreateAdditionalOptions = require('../pageObject/Membership/membershipCreateAdditionalOptions.js');
-var CreateAnOrder = require('../pageObject/createAnOrder.js');
+var CreateAnOrder = require('../pageObject/Orders/createAnOrder.js');
 var Individual360 = require('../pageObject/CRM/individual360');
 
 describe('New Memberships', function () {
@@ -49,7 +49,7 @@ describe('New Memberships', function () {
 
         expect(browser.getTitle()).toEqual('MemberSuite - Create an Order');
         var co = new CreateAnOrder();
-        co.clickProcessOrderBtn();
+        co.processOrder(); 
 
         var ind360 = new Individual360 ();
         ind360.waitForMessageBanner();

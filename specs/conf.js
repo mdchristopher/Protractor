@@ -36,7 +36,7 @@ exports.config = {
     onComplete: null,
     isVerbose: true,
     includeStackTrace: true,
-    defaultTimeoutInterval: 30000,
+      defaultTimeoutInterval: 90000,
     showColors: true
   }
 };

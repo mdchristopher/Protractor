@@ -1,11 +1,11 @@
-var LoginPage = require('../pageObject/Common/loginPage.js');
-var ConsoleHomePage = require('../pageObject/Common/consoleHomePage.js');
-var OverviewPage = require('../pageObject/Common/overviewPage.js');
+var LoginPage = require('../pageObject/loginPage.js');
+var ConsoleHomePage = require('../pageObject/consoleHomePage.js');
+var OverviewPage = require('../pageObject/overviewPage.js');
 var MembershipCreateSelect = require('../pageObject/Membership/membershipCreateSelect.js');
 var CreateAnIndividual = require('../pageObject/CRM/CreateAnIndividual.js');
 var MembershipCreateSelectType = require('../pageObject/Membership/membershipCreateSelectType.js');
 var MembershipCreateAdditionalOptions = require('../pageObject/Membership/membershipCreateAdditionalOptions.js');
-var CreateAnOrder = require('../pageObject/Orders/createAnOrder.js');
+var CreateAnOrder = require('../pageObject/createAnOrder.js');
 var Individual360 = require('../pageObject/CRM/individual360');
 
 describe('New Memberships', function () {

@@ -1,19 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b41bb7f8-fb15-49d8-bfe7-c69020e190b2" name="Default" comment="Initial check in of functional test for the raw offer provider page and the history transaction page&#10;">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/production_support/detailed_history/data.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/production_support/detailed_history/detailed_history_pageobject.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/production_support/raw_provider/distributor.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/production_support/raw_provider/provider.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/production_support/raw_provider/raw_provider_offer_request_pageobject.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/production_support/transaction_history/transaction_history.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/production_support/transaction_history/transactiondata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/specs/conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/specs/detailed_history_spec.js" afterPath="" />
+    <list default="true" id="b41bb7f8-fb15-49d8-bfe7-c69020e190b2" name="Default" comment="Update folder structure">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pageObject/Common/quickSearchPage.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pageObject/Payment/receiveAPayment.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/specs/consoleOrder_spec.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.WebStorm2016.1/config/options/security.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.WebStorm2016.1/config/options/ui.lnf.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.WebStorm2016.1/config/options/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/git-repos/Protractor-master/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/git-repos/Protractor-master/specs/login_spec.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/specs/example_spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/specs/transaction_history_spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/specs/example_spec/jasmine.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/specs/example_spec/jasmine.html" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pageObject/consoleHomePage.js" afterPath="$PROJECT_DIR$/pageObject/Common/consoleHomePage.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pageObject/createAnOrder.js" afterPath="$PROJECT_DIR$/pageObject/Orders/createAnOrder.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pageObject/loginPage.js" afterPath="$PROJECT_DIR$/pageObject/Common/loginPage.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pageObject/overviewPage.js" afterPath="$PROJECT_DIR$/pageObject/Common/overviewPage.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pageObject/receiveAPayment.js" afterPath="$PROJECT_DIR$/pageObject/Financial/receiveAPayment.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pageObject/CRM/createAnIndividual.js" afterPath="$PROJECT_DIR$/pageObject/CRM/createAnIndividual.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pageObject/CRM/individual360.js" afterPath="$PROJECT_DIR$/pageObject/CRM/individual360.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pageObject/Membership/membershipCreateAdditionalOptions.js" afterPath="$PROJECT_DIR$/pageObject/Membership/membershipCreateAdditionalOptions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pageObject/Membership/membershipCreateSelect.js" afterPath="$PROJECT_DIR$/pageObject/Membership/membershipCreateSelect.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pageObject/Membership/membershipCreateSelectType.js" afterPath="$PROJECT_DIR$/pageObject/Membership/membershipCreateSelectType.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specs/conf.js" afterPath="$PROJECT_DIR$/specs/conf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specs/consolePayment_spec.js" afterPath="$PROJECT_DIR$/specs/consolePayment_spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specs/login_spec.js" afterPath="$PROJECT_DIR$/specs/login_spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specs/membership.js" afterPath="$PROJECT_DIR$/specs/membership.js" />
     </list>
     <ignored path="protractor.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,19 +48,129 @@
     <favorites_list name="protractor" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="conf.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/specs/conf.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="consolePayment_spec.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/specs/consolePayment_spec.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="705">
+              <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="direct.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/driverProviders/direct.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="660">
+              <caret line="62" column="14" selection-start-line="62" selection-start-column="14" selection-end-line="62" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="consoleOrder_spec.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/specs/consoleOrder_spec.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="receiveAPayment.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pageObject/Payment/receiveAPayment.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#40#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="quickSearchPage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pageObject/Common/quickSearchPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#40#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loginPage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pageObject/Common/loginPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createAnIndividual.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pageObject/CRM/createAnIndividual.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="individual360.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pageObject/CRM/individual360.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="2" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="overviewPage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pageObject/Common/overviewPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="tsconfig.json" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="SYNC" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="master" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="mdchristopher" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="Protractor" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -68,13 +193,19 @@
         <option value="$PROJECT_DIR$/pages/production_support/transaction_history/transactiondata.json" />
         <option value="$PROJECT_DIR$/example/example_spec.js" />
         <option value="$PROJECT_DIR$/example/transaction_history_spec.js" />
-        <option value="$PROJECT_DIR$/specs/example_spec.js" />
         <option value="$PROJECT_DIR$/specs/conf.js" />
-        <option value="$PROJECT_DIR$/specs/consolePayment_spec.js" />
         <option value="$PROJECT_DIR$/pageObject/consoleHomePage.js" />
         <option value="$PROJECT_DIR$/pageObject/createAnOrder.js" />
         <option value="$PROJECT_DIR$/pageObject/overviewPage.js" />
         <option value="$PROJECT_DIR$/pageObject/receiveAPayment.js" />
+        <option value="$PROJECT_DIR$/pageObject/Orders/createAnOrder.js" />
+        <option value="$PROJECT_DIR$/pageObject/Payment/receiveAPayment.js" />
+        <option value="$PROJECT_DIR$/pageObject/CRM/individual360.js" />
+        <option value="$PROJECT_DIR$/pageObject/Common/overviewPage.js" />
+        <option value="$PROJECT_DIR$/pageObject/Common/quickSearchPage.js" />
+        <option value="$PROJECT_DIR$/pageObject/Common/loginPage.js" />
+        <option value="$PROJECT_DIR$/specs/consolePayment_spec.js" />
+        <option value="$PROJECT_DIR$/specs/example_spec.js" />
       </list>
     </option>
   </component>
@@ -116,6 +247,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -131,7 +263,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="protractor" />
+              <option name="myItemId" value="Protractor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -141,51 +273,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="protractor" />
+              <option name="myItemId" value="Protractor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="specs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protractor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protractor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pageObject" />
+              <option name="myItemId" value="selenium" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Protractor-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="SearchEverywhereHistoryKey" value="testData&#9;null&#9;null" />
     <property name="nodejs_interpreter_path" value="/usr/bin/node" />
+    <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\kishon.hamilton\AppData\Roaming\npm\node_modules\protractor\example" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pageObject/Common" />
+      <recent name="$PROJECT_DIR$/pageObject/Financial" />
+      <recent name="$PROJECT_DIR$/pageObject/Orders" />
       <recent name="C:\Users\kishon.hamilton\AppData\Roaming\npm\node_modules\protractor\pages\production_support" />
       <recent name="C:\Users\kishon.hamilton\AppData\Roaming\npm\node_modules\protractor\pages\production_support\transaction_history" />
-      <recent name="C:\Users\kishon.hamilton\AppData\Roaming\npm\node_modules\protractor\pages\rporpage" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/specs" />
+      <recent name="C:\Users\kishon.hamilton\AppData\Roaming\npm\node_modules\protractor\example" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.Protractor">
@@ -265,6 +386,8 @@
       <workItem from="1461543204587" duration="585000" />
       <workItem from="1461543858137" duration="5733000" />
       <workItem from="1461566925506" duration="284000" />
+      <workItem from="1461714742582" duration="7145000" />
+      <workItem from="1461722015632" duration="96000" />
     </task>
     <task id="LOCAL-00001" summary="Initial check in of functional test for the raw offer provider page and the history transaction page&#10;">
       <created>1457107122640</created>
@@ -273,30 +396,53 @@
       <option name="project" value="LOCAL" />
       <updated>1457107122640</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="remove example folder&#10;">
+      <created>1461714847122</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1461714847122</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update folder structure">
+      <created>1461720633072</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1461720633072</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6602000" />
+    <option name="totallyTimeSpent" value="13843000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="1345" y="-4" width="1615" height="1054" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20557275" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3387271" sideWeight="0.50288063" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20100503" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.49748743" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5025126" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3387271" sideWeight="0.49711934" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33870968" sideWeight="0.49434674" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3451613" sideWeight="0.49623117" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31794333" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3172043" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284055" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -336,7 +482,9 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="Initial check in of functional test for the raw offer provider page and the history transaction page&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial check in of functional test for the raw offer provider page and the history transaction page&#10;" />
+    <MESSAGE value="remove example folder&#10;" />
+    <MESSAGE value="Update folder structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update folder structure" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -346,13 +494,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/production_support/raw_provider/provider.json" />
-    <entry file="file://$PROJECT_DIR$/pages/production_support/raw_provider/distributor.json" />
-    <entry file="file://$PROJECT_DIR$/example/conf.js" />
-    <entry file="file://$PROJECT_DIR$/example/example_spec.js" />
-    <entry file="file://$PROJECT_DIR$/pages/production_support/raw_provider/raw_provider_offer_request_pageobject.js" />
-    <entry file="file://$PROJECT_DIR$/pages/production_support/raw_provider/provider.json" />
-    <entry file="file://$PROJECT_DIR$/pages/production_support/raw_provider/distributor.json" />
     <entry file="file://$PROJECT_DIR$/example/conf.js" />
     <entry file="file://$PROJECT_DIR$/example/example_spec.js" />
     <entry file="file://$PROJECT_DIR$/pages/production_support/raw_provider/raw_provider_offer_request_pageobject.js" />
@@ -406,48 +547,17 @@
     <entry file="file://$PROJECT_DIR$/example/conf.js" />
     <entry file="file://$PROJECT_DIR$/example/example_spec.js" />
     <entry file="file://$PROJECT_DIR$/example/transaction_history_spec.js" />
-    <entry file="file://$PROJECT_DIR$/pageObject/consoleHomePage.js">
+    <entry file="file://$PROJECT_DIR$/pageObject/Common/consoleHomePage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pageObject/loginPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pageObject/createAnOrder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="65" column="10" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pageObject/receiveAPayment.js">
+    <entry file="file://$PROJECT_DIR$/pageObject/Financial/receiveAPayment.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pageObject/overviewPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/specs/conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -455,22 +565,110 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pageObject/Orders/createAnOrder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-501">
+          <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="1842" column="99" selection-start-line="1842" selection-start-column="99" selection-end-line="1842" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/webdriver-manager">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2205">
+          <caret line="147" column="44" selection-start-line="147" selection-start-column="44" selection-end-line="147" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/specs/conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/specs/example_spec.js">
+    <entry file="file://$PROJECT_DIR$/pageObject/Payment/receiveAPayment.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+        <state relative-caret-position="195">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pageObject/CRM/createAnIndividual.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pageObject/CRM/individual360.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="2" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pageObject/Common/overviewPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pageObject/Common/quickSearchPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pageObject/Common/loginPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/specs/consoleOrder_spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/specs/consolePayment_spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+        <state relative-caret-position="705">
+          <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/driverProviders/direct.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="62" column="14" selection-start-line="62" selection-start-column="14" selection-end-line="62" selection-end-column="14" />
           <folding />
         </state>
       </provider>

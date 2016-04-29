@@ -36,11 +36,14 @@ describe('CRM CRUD', function () {
     it('should create a new individual, edit the basic information, save, then delete', function () {
         var ch = new ConsoleHomePage();
         ch.goToModule("CRM");
+
         var op = new OverviewPage();
         op.do('Create an Individual');
+
         var ci = new CreateAnIndividual();
         ci.enterBasicInfo("Matthew", "David", "Christopher", "mchristopher+auto@membersuite.com", "678-327-6801");
         ci.clickSave();
+
         var ind360 = new Individual360();
         ind360.messageBannerContains("The operation was completed successfully.");
         ind360.clickEditThisIndividual();
@@ -48,6 +51,16 @@ describe('CRM CRUD', function () {
         ci.clickSave();
         ind360.messageBannerContains("The operation was completed successfully.");
         ind360.phoneNumberShouldEqual("(111) 111-1111");
+        ind360.clickDeleteThisIndividual();
+        browser.switchTo().alert().accept();
+        browser.sleep(5000);
+        expect(browser.getTitle()).toEqual('MemberSuite - QA Test Automation Home');
+
+        /*
+         var ptor = protractor.getInstance();
+         var alertDialog = ptor.switchTo().alert();
+         alertDialog.accept();
+         */
     });
 
 });

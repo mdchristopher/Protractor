@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b41bb7f8-fb15-49d8-bfe7-c69020e190b2" name="Default" comment="Update internal timeout from 3000 to 9000 ms to accommodate for long running test">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/specs/membership.js" afterPath="$PROJECT_DIR$/specs/membership_specs.js" />
+    <list default="true" id="b41bb7f8-fb15-49d8-bfe7-c69020e190b2" name="Default" comment="Edits to createAnIndividual&#10;Adding CRM CRUD spec">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/specs/crmCRUD_specs.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specs/conf.js" afterPath="$PROJECT_DIR$/specs/conf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specs/login_spec.js" afterPath="$PROJECT_DIR$/specs/login_spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pageObject/CRM/createAnIndividual.js" afterPath="$PROJECT_DIR$/pageObject/CRM/createAnIndividual.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specs/membership_specs.js" afterPath="$PROJECT_DIR$/specs/membership_specs.js" />
     </list>
     <ignored path="protractor.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -20,18 +20,51 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="createAnIndividual.js" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/pageObject/CRM/createAnIndividual.js">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.22528033">
+                    <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="membership_specs.js" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/specs/membership_specs.js">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.0">
+                    <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="protractor" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="conf.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/specs/conf.js">
+      <file leaf-file-name="crmCRUD_specs.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/specs/crmCRUD_specs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.74151856">
-              <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-              <folding />
+            <state vertical-scroll-proportion="0.30807248">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding>
+                <element signature="e#417#635#0" expanded="false" />
+                <element signature="e#664#737#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -100,6 +133,8 @@
         <option value="$PROJECT_DIR$/specs/conf.js" />
         <option value="$PROJECT_DIR$/specs/login_spec.js" />
         <option value="$PROJECT_DIR$/specs/membership_specs.js" />
+        <option value="$PROJECT_DIR$/pageObject/CRM/createAnIndividual.js" />
+        <option value="$PROJECT_DIR$/specs/crmCRUD_specs.js" />
       </list>
     </option>
   </component>
@@ -447,7 +482,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461945866498</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Update internal timeout from 3000 to 9000 ms to accommodate for long running test">
+      <created>1461947824372</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1461947824372</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -468,11 +509,11 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20052083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.49748743" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31678987" sideWeight="0.5052083" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32946146" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32946146" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24604012" sideWeight="0.4921875" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31678987" sideWeight="0.49479166" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31678987" sideWeight="0.49479166" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2344245" sideWeight="0.49623117" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -523,12 +564,13 @@
     <MESSAGE value="Update folder structure" />
     <MESSAGE value="Move overViewPage.js and createAnOrder.js to Common folder" />
     <MESSAGE value="Update internal timeout from 3000 to 9000 ms to accommodate for long running test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update internal timeout from 3000 to 9000 ms to accommodate for long running test" />
+    <MESSAGE value="Edits to createAnIndividual&#10;Adding CRM CRUD spec" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edits to createAnIndividual&#10;Adding CRM CRUD spec" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -658,14 +700,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pageObject/CRM/createAnIndividual.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5121951">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pageObject/CRM/individual360.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2682927">
@@ -765,19 +799,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/specs/membership_specs.js">
+    <entry file="file://$PROJECT_DIR$/specs/conf.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5218094">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.549273">
+          <caret line="20" column="60" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/specs/conf.js">
+    <entry file="file://$PROJECT_DIR$/specs/membership_specs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.74151856">
-          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pageObject/CRM/createAnIndividual.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22528033">
+          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/specs/crmCRUD_specs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30807248">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="e#417#635#0" expanded="false" />
+            <element signature="e#664#737#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

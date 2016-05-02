@@ -2,7 +2,7 @@ var CreateAnOrderPage = function () {
 
 
     this.billTo = function (billtoname) {
-        var EC;
+
         var EC = protractor.ExpectedConditions;
 
         browser.wait(EC.visibilityOf(element(by.id('ctl00_body_cbBillTo_Input')), 5000));
@@ -42,7 +42,7 @@ var CreateAnOrderPage = function () {
         var product = element(by.id("ctl00_body_rgItems_ctl00_ctl04_cbProduct_Input"));
         product.sendKeys(productname);
 
-        var EC = protractor.ExpectedConditions;
+
         browser.wait(EC.visibilityOf(element(by.xpath(productXpath.replace("{0}", productname)), 5000)));
 
         var shipToRecord = element(by.xpath(productXpath.replace("{0}", productname)));
@@ -85,6 +85,51 @@ var CreateAnOrderPage = function () {
             }
         })
 
+    };
+    this.electronicCheck = function (bankaccount, routingnumber, accounttype, savecc) {
+
+
+        var bankAccountNumber = element(by.id('ctl00_body_tbBankAccountNumber'));
+        bankAccountNumber.sendKeys(bankaccount);
+
+        var routingNumber = element(by.id('ctl00_body_tbRoutingNumber'));
+        routingNumber.sendKeys(routingnumber);
+
+
+        var expirationMonth = element(by.id('#ctl00_body_cbBankAccountType_Input')).sendKeys(accounttype);
+        var EC = protractor.ExpectedConditions;
+        // Waits for the element with id 'abc' to be visible on the dom.
+        browser.wait(EC.visibilityOf(element(by.css('.rcbList li', accounttype)), 5000));
+
+        // var expirationMonth = element(by.css('.rcbList li', accounttype)).click();
+
+        //var accountTypeArrow = element(by.id('ctl00_body_cbBankAccountType_Input'));
+        //accountTypeArrow.click();
+
+        //var accountTypeXpath = ".//ul/li[.='{0}']";
+
+        //var EC = protractor.ExpectedConditions;
+        // Waits for the element with id 'abc' to be clickable.
+        //browser.wait(EC.elementToBeClickable(element(by.xpath(accountTypeXpath.replace("{0}", accounttype)), 50000)));
+
+
+        //var accountType = element(by.xpath(accountTypeXpath.replace("{0}", accounttype)));
+        //accountType.sendKeys(accounttype);
+
+
+        //var EC = protractor.ExpectedConditions;
+        // Waits for the element with id 'abc' to be clickable.
+        // browser.wait(EC.elementToBeClickable(element(by.css("#ctl00_body_tblSavePaymentInfo>tbody>tr>td>label")), 5000));
+
+
+        /*
+         var checkbox = element(by.id('ctl00_body_cbSavePaymentMethod'));
+         checkbox.isSelected().then(function (selected) {
+         if (selected !== savecc) {
+         checkbox.click();
+         }
+         })
+         */
     };
 
     this.processOrder = function () {

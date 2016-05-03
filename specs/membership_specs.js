@@ -12,6 +12,7 @@ describe('New Memberships', function () {
 
     beforeAll(function () {
         browser.ignoreSynchronization = true;
+        browser.driver.manage().window().maximize();
         var login = new LoginPage();
         login.goTo();
         login.login("MattAutoTest", "MattAutoTest");

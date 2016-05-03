@@ -1,6 +1,4 @@
-var LoginPage = require('../pageObject/loginPage.js');
-var LoginPage = require('../pageObject/consoleHomePage.js');
-var LoginPage = require('../pageObject/Events/eventsOverview.js');
+var LoginPage = require('../pageObject/Common/loginPage.js');
 
 describe('Console Login Page', function () {
    

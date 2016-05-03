@@ -37,8 +37,11 @@ exports.config = {
     // Spec patterns are relative to the current working directly when
     // protractor is called.
 
-    specs: ['consoleOrder_spec.js'],
+    //use this to run all specs
+    //specs: ['*spec.js'],
 
+    //use this to run multiple specific specs
+    specs: ['crmCRUD_specs.js'],
 
     // Options to be passed to Jasmine.
     jasmineNodeOpts: {

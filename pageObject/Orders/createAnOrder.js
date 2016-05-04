@@ -96,40 +96,18 @@ var CreateAnOrderPage = function () {
         routingNumber.sendKeys(routingnumber);
 
 
-        var expirationMonth = element(by.id('#ctl00_body_cbBankAccountType_Input')).sendKeys(accounttype);
+        var expirationMonth = element(by.id('ctl00_body_cbBankAccountType_Input')).sendKeys(accounttype);
+
+
         var EC = protractor.ExpectedConditions;
-        // Waits for the element with id 'abc' to be visible on the dom.
-        browser.wait(EC.visibilityOf(element(by.css('.rcbList li', accounttype)), 5000));
+        browser.wait(EC.elementToBeClickable(element(by.css("#ctl00_body_tblSavePaymentInfo>tbody>tr>td>label")), 5000));
+        var checkbox = element(by.id('ctl00_body_cbSavePaymentMethod'));
+        checkbox.isSelected().then(function (selected) {
+            if (selected !== savecc) {
+                checkbox.click();
+            }
+        })
 
-        // var expirationMonth = element(by.css('.rcbList li', accounttype)).click();
-
-        //var accountTypeArrow = element(by.id('ctl00_body_cbBankAccountType_Input'));
-        //accountTypeArrow.click();
-
-        //var accountTypeXpath = ".//ul/li[.='{0}']";
-
-        //var EC = protractor.ExpectedConditions;
-        // Waits for the element with id 'abc' to be clickable.
-        //browser.wait(EC.elementToBeClickable(element(by.xpath(accountTypeXpath.replace("{0}", accounttype)), 50000)));
-
-
-        //var accountType = element(by.xpath(accountTypeXpath.replace("{0}", accounttype)));
-        //accountType.sendKeys(accounttype);
-
-
-        //var EC = protractor.ExpectedConditions;
-        // Waits for the element with id 'abc' to be clickable.
-        // browser.wait(EC.elementToBeClickable(element(by.css("#ctl00_body_tblSavePaymentInfo>tbody>tr>td>label")), 5000));
-
-
-        /*
-         var checkbox = element(by.id('ctl00_body_cbSavePaymentMethod'));
-         checkbox.isSelected().then(function (selected) {
-         if (selected !== savecc) {
-         checkbox.click();
-         }
-         })
-         */
     };
 
     this.processOrder = function () {

@@ -14,7 +14,7 @@ exports.config = {
     useAllAngular2AppRoots: true,
     directConnect: true,
     capabilities: {
-        'browserName': 'chrome'
+        'browserName': 'firefox'
 
     },
     /*
@@ -38,10 +38,10 @@ exports.config = {
     // protractor is called.
 
     //use this to run all specs
-    //specs: ['*spec.js'],
+    specs: ['*_spec.js'],
 
     //use this to run multiple specific specs
-    specs: ['crmCRUD_specs.js'],
+    //specs: ['crmCRUD_spec.js'],
 
     // Options to be passed to Jasmine.
     jasmineNodeOpts: {

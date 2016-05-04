@@ -11,11 +11,17 @@ describe('Create an Order', function () {
     beforeAll(function () {
         browser.ignoreSynchronization = true;
         browser.driver.manage().window().maximize();
+        browser.deleteAllCookies();
         var login = new LoginPage();
         login.goTo();
-        login.login("khamilton", "khamilton");
+        login.login("MattAutoTest", "MattAutoTest");
     });
-    xit('should return the correct page title', function () {
+
+    afterAll(function () {
+        browser.deleteAllCookies();
+    });
+
+    it('should return the correct page title', function () {
         var ch = new ConsoleHomePage();
         ch.goToModule("Orders");
         expect(browser.getTitle()).toEqual('MemberSuite - Orders Overview');
@@ -23,16 +29,16 @@ describe('Create an Order', function () {
     });
 
 
-    xit('should allow a console user to process an order with a credit card payment and save cc information for future use ', function () {
+    it('should allow a console user to process an order with a credit card payment and save cc information for future use ', function () {
 
         var ch = new ConsoleHomePage();
         ch.goToModule("Orders");
         var op = new OverviewPage();
         op.do("Process an Order");
         var co = new CreateAnOrderPage();
-        co.billTo("Dwain");
+        co.billTo("Zurzeres");
         browser.sleep(3000);
-        co.selectProduct("Anniversary Based");
+        co.selectProduct("Fundraising Product");
         browser.sleep(3000);
         co.paymentType("Credit Card");
         co.creditCardPayment("4111111111111111", "June", "2017", "123", true);
@@ -41,16 +47,16 @@ describe('Create an Order', function () {
         expect(pp.isAt()).toContain("Order 360");
 
     });
-    xit('should allow a console user to process an order with a credit card payment but not save cc information ', function () {
+    it('should allow a console user to process an order with a credit card payment but not save cc information ', function () {
 
         var ch = new ConsoleHomePage();
         ch.goToModule("Orders");
         var op = new OverviewPage();
         op.do("Process an Order");
         var co = new CreateAnOrderPage();
-        co.billTo("Dwain");
+        co.billTo("Zurzeres");
         browser.sleep(3000);
-        co.selectProduct("Anniversary Based");
+        co.selectProduct("Fundraising Product");
         browser.sleep(3000);
         co.paymentType("Credit Card");
         co.creditCardPayment("4111111111111111", "June", "2017", "123", false);
@@ -59,16 +65,16 @@ describe('Create an Order', function () {
         expect(pp.isAt()).toContain("Order 360");
 
     });
-    xit('should allow a console user to pay on an order with a saved payment methon ', function () {
+    it('should allow a console user to pay on an order with a saved payment methon ', function () {
 
         var ch = new ConsoleHomePage();
         ch.goToModule("Orders");
         var op = new OverviewPage();
         op.do("Process an Order");
         var co = new CreateAnOrderPage();
-        co.billTo("Dwain");
+        co.billTo("Zurzeres");
         browser.sleep(3000);
-        co.selectProduct("Anniversary Based");
+        co.selectProduct("Fundraising Product");
         browser.sleep(3000);
         co.paymentType("Saved Payment");
         co.savedPaymentMethod("Visa ending in xx1");
@@ -84,12 +90,12 @@ describe('Create an Order', function () {
         var op = new OverviewPage();
         op.do("Process an Order");
         var co = new CreateAnOrderPage();
-        co.billTo("Dwain");
+        co.billTo("Zurzeres");
         browser.sleep(3000);
-        co.selectProduct("Anniversary Based");
+        co.selectProduct("Fundraising Product");
         browser.sleep(3000);
         co.paymentType("Electronic Check");
-        co.electronicCheck("011401533", "082000073", "Checking", true);
+        co.electronicCheck("12345678910245", "12345678910245", "Savings", true);
         browser.sleep(3000); 
         co.processOrder();
         var pp = new Payment360Page();

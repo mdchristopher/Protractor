@@ -21,6 +21,9 @@ var CreateAnIndividual = function () {
 
 
     this.enterBasicInfo = function (firstname, middlename, lastname, emailaddress, mainphonenumber) {
+        var EC = protractor.ExpectedConditions;
+        browser.wait(EC.visibilityOf(element(by.xpath(".//td/label[contains(text(), 'First Name')]/following:: td[1]/input"))));
+
         this.firstNameTxt.clear().sendKeys(firstname);
         this.middleNameTxt.clear().sendKeys(middlename);
         this.lastNameTxt.clear().sendKeys(lastname);

@@ -2,7 +2,7 @@ var LoginPage = require('../pageObject/Common/loginPage.js');
 var ConsoleHomePage = require('../pageObject/Common/consoleHomePage.js');
 var OverviewPage = require('../pageObject/Common/overviewPage.js');
 var CreateAnOrderPage = require('../pageObject/Orders/createAnOrder.js');
-var Payment360Page = require('../pageObject/payment360Page.js');
+var Payment360Page = require('../pageObject/Financial/payment360Page.js');
 
 
 describe('Create an Order', function () {
@@ -11,10 +11,16 @@ describe('Create an Order', function () {
     beforeAll(function () {
         browser.ignoreSynchronization = true;
         browser.driver.manage().window().maximize();
+        browser.deleteAllCookies();
         var login = new LoginPage();
         login.goTo();
-        login.login("khamilton", "khamilton");
+        login.login("MattAutoTest", "MattAutoTest");
     });
+
+    afterAll(function () {
+        browser.deleteAllCookies();
+    });
+
     it('should return the correct page title', function () {
         var ch = new ConsoleHomePage();
         ch.goToModule("Orders");
@@ -30,9 +36,9 @@ describe('Create an Order', function () {
         var op = new OverviewPage();
         op.do("Process an Order");
         var co = new CreateAnOrderPage();
-        co.billTo("Dwain");
+        co.billTo("Zurzeres");
         browser.sleep(3000);
-        co.selectProduct("Anniversary Based");
+        co.selectProduct("Fundraising Product");
         browser.sleep(3000);
         co.paymentType("Credit Card");
         co.creditCardPayment("4111111111111111", "June", "2017", "123", true);
@@ -48,9 +54,9 @@ describe('Create an Order', function () {
         var op = new OverviewPage();
         op.do("Process an Order");
         var co = new CreateAnOrderPage();
-        co.billTo("Dwain");
+        co.billTo("Zurzeres");
         browser.sleep(3000);
-        co.selectProduct("Anniversary Based");
+        co.selectProduct("Fundraising Product");
         browser.sleep(3000);
         co.paymentType("Credit Card");
         co.creditCardPayment("4111111111111111", "June", "2017", "123", false);
@@ -66,12 +72,31 @@ describe('Create an Order', function () {
         var op = new OverviewPage();
         op.do("Process an Order");
         var co = new CreateAnOrderPage();
-        co.billTo("Dwain");
+        co.billTo("Zurzeres");
         browser.sleep(3000);
-        co.selectProduct("Anniversary Based");
+        co.selectProduct("Fundraising Product");
         browser.sleep(3000);
         co.paymentType("Saved Payment");
         co.savedPaymentMethod("Visa ending in xx1");
+        co.processOrder();
+        var pp = new Payment360Page();
+        expect(pp.isAt()).toContain("Order 360");
+
+    });
+    it('should allow a console user to pay on an order with a E-check', function () {
+
+        var ch = new ConsoleHomePage();
+        ch.goToModule("Orders");
+        var op = new OverviewPage();
+        op.do("Process an Order");
+        var co = new CreateAnOrderPage();
+        co.billTo("Zurzeres");
+        browser.sleep(3000);
+        co.selectProduct("Fundraising Product");
+        browser.sleep(3000);
+        co.paymentType("Electronic Check");
+        co.electronicCheck("12345678910245", "12345678910245", "Savings", true);
+        browser.sleep(3000); 
         co.processOrder();
         var pp = new Payment360Page();
         expect(pp.isAt()).toContain("Order 360");

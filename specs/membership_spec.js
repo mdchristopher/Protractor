@@ -12,6 +12,8 @@ describe('New Memberships', function () {
 
     beforeAll(function () {
         browser.ignoreSynchronization = true;
+        browser.driver.manage().window().maximize();
+
         var login = new LoginPage();
         login.goTo();
         login.login("MattAutoTest", "MattAutoTest");
@@ -19,8 +21,9 @@ describe('New Memberships', function () {
 
     afterAll(function(){
         var ch = new ConsoleHomePage();
-        ch.clickSignOut()
-});
+        ch.clickSignOut();
+        browser.deleteAllCookies();
+    });
 
     it ('should process membership for new individual', function () {
         var ch = new ConsoleHomePage();

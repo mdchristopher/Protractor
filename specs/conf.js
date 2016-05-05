@@ -38,10 +38,10 @@ exports.config = {
     // protractor is called.
 
     //use this to run all specs
-    specs: ['*_spec.js'],
+    //specs: ['*_spec.js'],
 
     //use this to run multiple specific specs
-    //specs: ['crmCRUD_spec.js'],
+    specs: ['portalLogin_spec.js'],
 
     // Options to be passed to Jasmine.
     jasmineNodeOpts: {

@@ -11,14 +11,14 @@ describe('Create an Order', function () {
     beforeAll(function () {
         browser.ignoreSynchronization = true;
         browser.driver.manage().window().maximize();
-        browser.deleteAllCookies();
+        browser.manage().deleteAllCookies();
         var login = new LoginPage();
         login.goTo();
         login.login("MattAutoTest", "MattAutoTest");
     });
 
     afterAll(function () {
-        browser.deleteAllCookies();
+        browser.manage().deleteAllCookies();
     });
 
     it('should return the correct page title', function () {
@@ -95,7 +95,7 @@ describe('Create an Order', function () {
         co.selectProduct("Fundraising Product");
         browser.sleep(3000);
         co.paymentType("Electronic Check");
-        co.electronicCheck("12345678910245", "12345678910245", "Savings", true);
+        co.electronicCheck("123456789", "061000052", "Checking", false);
         browser.sleep(3000); 
         co.processOrder();
         var pp = new Payment360Page();

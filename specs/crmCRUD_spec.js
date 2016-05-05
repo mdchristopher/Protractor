@@ -9,7 +9,7 @@ describe('CRM CRUD', function () {
     beforeAll(function () {
         browser.ignoreSynchronization = true;
         browser.driver.manage().window().maximize();
-        browser.deleteAllCookies();
+        browser.manage().deleteAllCookies();
         var login = new LoginPage();
         login.goTo();
         login.login("MattAutoTest", "MattAutoTest");
@@ -18,7 +18,7 @@ describe('CRM CRUD', function () {
     afterAll(function () {
         var ch = new ConsoleHomePage();
         ch.clickSignOut();
-        browser.deleteAllCookies();
+        //browser.deleteAllCookies();
     });
 
     /*

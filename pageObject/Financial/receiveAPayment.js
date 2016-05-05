@@ -3,12 +3,15 @@ var ReceiveAPaymentPage = function () {
     this.getCustomer = function (billtoname) {
        
         var billToTextBx = element(by.id('ctl00_body_cbBillTo_Input'));
-        billToTextBx.clear();
-        billToTextBx.sendKeys(billtoname);
+        billToTextBx.clear().sendKeys(billtoname);
 
         var customerNameXpath = ".//td/span[contains(text(), '{0}')]";
         var EC = protractor.ExpectedConditions;
-        browser.wait(EC.visibilityOf(element(by.xpath(customerNameXpath.replace("{0}", billtoname)), 5000))).click();
+        browser.wait(EC.visibilityOf(element(by.xpath(customerNameXpath.replace("{0}", billtoname)), 5000)));
+
+        var customer = element(by.xpath(customerNameXpath.replace("{0}", billtoname)));
+        customer.click();
+
     };
 
     this.selectAnInvoice = function () {

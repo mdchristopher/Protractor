@@ -2,7 +2,7 @@ var CreateAnOrderPage = function () {
 
 
     this.billTo = function (billtoname) {
-        var EC;
+
         var EC = protractor.ExpectedConditions;
 
         browser.wait(EC.visibilityOf(element(by.id('ctl00_body_cbBillTo_Input')), 5000));
@@ -42,7 +42,7 @@ var CreateAnOrderPage = function () {
         var product = element(by.id("ctl00_body_rgItems_ctl00_ctl04_cbProduct_Input"));
         product.sendKeys(productname);
 
-        var EC = protractor.ExpectedConditions;
+
         browser.wait(EC.visibilityOf(element(by.xpath(productXpath.replace("{0}", productname)), 5000)));
 
         var shipToRecord = element(by.xpath(productXpath.replace("{0}", productname)));
@@ -78,6 +78,29 @@ var CreateAnOrderPage = function () {
         var ccvCode = element(by.id('ctl00_body_tbCCV'));
         ccvCode.sendKeys(ccv);
 
+        var checkbox = element(by.id('ctl00_body_cbSavePaymentMethod'));
+        checkbox.isSelected().then(function (selected) {
+            if (selected !== savecc) {
+                checkbox.click();
+            }
+        })
+
+    };
+    this.electronicCheck = function (bankaccount, routingnumber, accounttype, savecc) {
+
+
+        var bankAccountNumber = element(by.id('ctl00_body_tbBankAccountNumber'));
+        bankAccountNumber.sendKeys(bankaccount);
+
+        var routingNumber = element(by.id('ctl00_body_tbRoutingNumber'));
+        routingNumber.sendKeys(routingnumber);
+
+
+        var expirationMonth = element(by.id('ctl00_body_cbBankAccountType_Input')).sendKeys(accounttype);
+
+
+        var EC = protractor.ExpectedConditions;
+        browser.wait(EC.elementToBeClickable(element(by.css("#ctl00_body_tblSavePaymentInfo>tbody>tr>td>label")), 5000));
         var checkbox = element(by.id('ctl00_body_cbSavePaymentMethod'));
         checkbox.isSelected().then(function (selected) {
             if (selected !== savecc) {

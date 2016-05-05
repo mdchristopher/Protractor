@@ -13,6 +13,7 @@ describe('New Memberships', function () {
     beforeAll(function () {
         browser.ignoreSynchronization = true;
         browser.driver.manage().window().maximize();
+        browser.manage().deleteAllCookies();
 
         var login = new LoginPage();
         login.goTo();
@@ -22,7 +23,7 @@ describe('New Memberships', function () {
     afterAll(function(){
         var ch = new ConsoleHomePage();
         ch.clickSignOut();
-        browser.deleteAllCookies();
+        browser.manage().deleteAllCookies();
     });
 
     it ('should process membership for new individual', function () {

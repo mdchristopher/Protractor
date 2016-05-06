@@ -41,7 +41,7 @@ exports.config = {
     //specs: ['*_spec.js'],
 
     //use this to run multiple specific specs
-    specs: ['portalLogin_spec.js'],
+    specs: ['crmSMOKE_spec.js'],
 
     // Options to be passed to Jasmine.
     jasmineNodeOpts: {

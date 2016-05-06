@@ -13,7 +13,7 @@ describe('New Memberships', function () {
     beforeAll(function () {
         browser.ignoreSynchronization = true;
         browser.driver.manage().window().maximize();
-
+        browser.manage().deleteAllCookies();
         var login = new LoginPage();
         login.goTo();
         login.login("MattAutoTest", "MattAutoTest");
@@ -22,41 +22,30 @@ describe('New Memberships', function () {
     afterAll(function(){
         var ch = new ConsoleHomePage();
         ch.clickSignOut();
-        browser.deleteAllCookies();
+        browser.manage().deleteAllCookies();
     });
 
     it ('should process membership for new individual', function () {
         var ch = new ConsoleHomePage();
         ch.goToModule("Members");
-
-        expect(browser.getTitle()).toEqual('MemberSuite - Membership Overview');
         var op = new OverviewPage();
         op.do("Create a Member");
-
-        expect(browser.getTitle()).toEqual('MemberSuite - Create a Member');
         var mcs = new MembershipCreateSelect();
         mcs.select("2");
-
-        //expect(browser.getTitle()).toEqual('MemberSuite - Create an Individual - Enter  Information');
         var ci = new CreateAnIndividual();
         ci.enterBasicInfo("Matthew", "Christopher", "mchristopher+auto@membersuite.com");
         ci.clickSave();
-
-        expect(browser.getTitle()).toEqual('MemberSuite - Create/Renew a Membership');
         var mcts = new MembershipCreateSelectType();
         mcts.clickContinue();
-
-        expect(browser.getTitle()).toEqual('MemberSuite - Create/Renew a Membership');
         var mcao = new MembershipCreateAdditionalOptions();
         mcao.clickContinue();
-
-        expect(browser.getTitle()).toEqual('MemberSuite - Create an Order');
         var co = new CreateAnOrder();
-        co.processOrder(); 
-
+        co.paymentType("Credit Card");
+        co.creditCardPayment("4111111111111111", "June", "2017", "123", false);
+        co.processOrder();
         var ind360 = new Individual360 ();
         ind360.waitForMessageBanner();
-
+        ind360.messageBannerContains("successfull");
     });
 
 });

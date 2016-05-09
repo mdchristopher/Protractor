@@ -6,21 +6,20 @@ var Individual360 = require('../pageObject/CRM/individual360');
 
 describe('CRM CRUD', function () {
 
-    beforeAll(function () {
+    beforeEach(function () {
         browser.ignoreSynchronization = true;
         browser.driver.manage().window().maximize();
-        browser.deleteAllCookies();
         var login = new LoginPage();
         login.goTo();
         login.login("MattAutoTest", "MattAutoTest");
     });
-
+    /*
     afterAll(function () {
         var ch = new ConsoleHomePage();
         ch.clickSignOut();
-        browser.deleteAllCookies();
-    });
 
+     });
+     */
     /*
     it('should create a new Individual', function () {
         var ch = new ConsoleHomePage();

@@ -72,7 +72,8 @@
     "marked": "^0.3.3",
     "mocha": "2.3.4",
     "protractor-jasmine2-screenshot-reporter": "^0.3.1",
-    "rimraf": "~2.5.0"
+    "rimraf": "~2.5.0",
+    "protractor-jasmine2-html-reporter": "0.0.6"
   },
   "directories": {},
   "dist": {

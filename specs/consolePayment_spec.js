@@ -7,18 +7,14 @@ var ReceiveAPaymentPage = require('../pageObject/Financial/receiveAPayment.js');
 
 describe('Console Receive a Payment', function () {
 
-    beforeAll(function () {
+    beforeEach(function () {
         browser.ignoreSynchronization = true;
         browser.driver.manage().window().maximize();
-        browser.deleteAllCookies(); 
         var login = new LoginPage();
         login.goTo();
         login.login("MattAutoTest", "MattAutoTest");
     });
 
-    afterAll(function () {
-        browser.deleteAllCookies();
-    });
    
     it('should return the correct page title', function () {
         var ch = new ConsoleHomePage();

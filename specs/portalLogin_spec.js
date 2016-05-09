@@ -11,6 +11,7 @@ describe('Console Login Page', function () {
         var plp = new PortalLoginPage();
         plp.goTo("https://customer257560636.portal.membersuite.com/Login.aspx");
         expect(browser.getTitle()).toEqual('Login to QA Blank Association 02');
+
     });
 
     it('should allow a user with valid credentials to login to the system', function () {
@@ -18,6 +19,7 @@ describe('Console Login Page', function () {
         plp.goTo("https://customer257560636.portal.membersuite.com/Login.aspx");
         plp.login("MattAutoTest", "MattAutoTest");
         expect(browser.getTitle()).toEqual('Login to QA Blank Association 02');
+
     });
 
 });

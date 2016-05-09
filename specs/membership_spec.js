@@ -10,7 +10,7 @@ var Individual360 = require('../pageObject/CRM/individual360');
 
 describe('New Memberships', function () {
 
-    beforeAll(function () {
+    beforeEach(function () {
         browser.ignoreSynchronization = true;
         browser.driver.manage().window().maximize();
 
@@ -19,12 +19,13 @@ describe('New Memberships', function () {
         login.login("MattAutoTest", "MattAutoTest");
     });
 
+    /*
     afterAll(function(){
         var ch = new ConsoleHomePage();
         ch.clickSignOut();
         browser.deleteAllCookies();
     });
-
+     */
     it ('should process membership for new individual', function () {
         var ch = new ConsoleHomePage();
         ch.goToModule("Members");

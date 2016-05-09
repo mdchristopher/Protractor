@@ -51,8 +51,9 @@ describe('CRM CRUD', function () {
         var co = new CreateAnOrganization();
         co.enterBasicInfo("MemberSuite", "123-456-7890");
         co.enterBillingInfo("Matthew Christopher", "678-327-6801", "mchristopher@membersuite.com");
-        co.enterMainAddress("47 Perimeter Ctr E", "", "30346", "GA", "US");
+        co.enterMainAddress("47 Perimeter Ctr E", "", "30346", "Roswell", "GA", "US");
         co.clickSave();
+        browser.pause();
     });
 
 });

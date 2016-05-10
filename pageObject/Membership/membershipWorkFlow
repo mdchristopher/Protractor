@@ -1,0 +1,10 @@
+var Payment360Page = function () {
+
+
+    this.createMembershipForNewIndividual = function () {
+
+    };
+
+
+};
+module.exports = Payment360Page;

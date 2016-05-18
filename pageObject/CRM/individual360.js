@@ -6,7 +6,10 @@ var Individual360 = function () {
 
 
     this.clickEditThisIndividual = function () {
+
+
         this.editThisIndividual.click();
+
     };
 
     this.clickDeleteThisIndividual = function () {

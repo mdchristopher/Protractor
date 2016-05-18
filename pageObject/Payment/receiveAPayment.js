@@ -106,7 +106,26 @@ var ReceiveAPaymentPage = function () {
         var EC = protractor.ExpectedConditions;
         browser.wait(EC.visibilityOf(element(by.xpath(merchantAccountXpath.replace("{0}", sourcecode)), 5000))).click();
 
-        var checkbox = element(by.id('ctl00_body_cbAutomaticallyEmail'));
+        var checkbox = element(by.id('ctl00_body_cbSavePaymentMethod'));
+        checkbox.isChecked().then(function (selected) {
+            if (selected !== savecc) {
+                checkbox.click();
+            }
+        });
+
+    };
+    this.enterEcheckInformation = function (bankaccountnumber, routingnumber, accounttype, savecc) {
+        var bankAccount = element(by.xpath(".//label[contains(text(), 'Bank Account #')]/following::td[1]/input"));
+        bankAccount.clear();
+        bankAccount.sendKeys(bankaccountnumber);
+
+        var routingABA = element(by.xpath(".//label[contains(text(), 'Routing/ABA')]/following::td[1]/input"));
+        routingABA.clear();
+        routingABA.sendKeys(routingnumber);
+
+        var expirationMonth = element(by.id('ctl00_body_cbBankAccountType_Input')).sendKeys(accounttype);
+
+        var checkbox = element(by.id('ctl00_body_cbSavePaymentMethod'));
         checkbox.isChecked().then(function (selected) {
             if (selected !== savecc) {
                 checkbox.click();

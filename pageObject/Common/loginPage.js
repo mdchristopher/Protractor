@@ -26,6 +26,13 @@ var LoginPage = function () {
 
     };
 
+    this.consoleLogin = function () {
+        this.goTo();
+        this.login("MattAutoTest", "MattAutoTest");
+
+
+    };
+
 
 };
 module.exports = LoginPage;

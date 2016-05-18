@@ -1,5 +1,6 @@
 // An example configuration file.
 
+/*
 var HtmlScreenshotReporter = require('protractor-jasmine2-screenshot-reporter');
 
 var reporter = new HtmlScreenshotReporter({
@@ -7,14 +8,17 @@ var reporter = new HtmlScreenshotReporter({
     filename: 'my-report.html',
     showConfiguration: true,
     reportTitle: null
-});
 
 
+ });
+
+ */
 exports.config = {
+    seleniumAddress: 'http://localhost:4444/wd/hub',
     useAllAngular2AppRoots: true,
-    directConnect: true,
+    //directConnect: true,
     capabilities: {
-        'browserName': 'firefox'
+        'browserName': 'chrome'
 
     },
     /*
@@ -38,7 +42,7 @@ exports.config = {
     // protractor is called.
 
     //use this to run all specs
-    specs: ['*_spec.js'],
+    specs: ['consoleEvent_spec.js'],
 
     //use this to run multiple specific specs
     //specs: ['crmCRUD_spec.js'],
@@ -50,12 +54,13 @@ exports.config = {
         includeStackTrace: true,
         defaultTimeoutInterval: 90000,
         showColors: true
-    },
+    }
 
+    /*
 // Setup the report before any tests start
     beforeLaunch: function () {
-        return new Promise(function (resolve) {
-            reporter.beforeLaunch(resolve);
+     return new Promise(function (resolve) {
+     reporter.beforeLaunch(resolve);
         });
     },
 
@@ -64,12 +69,12 @@ exports.config = {
         jasmine.getEnv().addReporter(reporter);
     },
 
-    // Close the report after all tests finish
+     //Close the report after all tests finish
     afterLaunch: function (exitCode) {
         return new Promise(function (resolve) {
             reporter.afterLaunch(resolve.bind(this, exitCode));
         });
     }
-
+     */
 
 };

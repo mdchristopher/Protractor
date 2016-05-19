@@ -6,7 +6,7 @@ var RegisterForAnEventPage = function () {
         var EC = protractor.ExpectedConditions;
         browser.wait(EC.visibilityOf(element(by.id('ctl00_body_cbExistingIndividual_Input')), 5000));
         var individualNameTx = element(by.id('ctl00_body_cbExistingIndividual_Input'));
-        individualNameTx.sendKeys(billtoname);
+        individualNameTx.sendKeys(name);
 
 
         var individualXpath = ".//td/span[contains(text(), '{0}')]";

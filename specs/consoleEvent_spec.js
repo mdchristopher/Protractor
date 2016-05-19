@@ -25,7 +25,7 @@ describe('Create an Event', function () {
         expect(browser.getTitle()).toEqual('MemberSuite - Events Overview');
 
     });
-    it('should allow a console user to create a event registration for a new individual', function () {
+    it('should allow a console user to create an event registration for a new individual', function () {
         var ch = new ConsoleHomePage();
         ch.goToModule("Events");
         var overviewpage = new OverviewPage();
@@ -40,7 +40,7 @@ describe('Create an Event', function () {
         createindiviual.enterBasicInfo("Joe", "", "Jackson", "Joe@jackson.com", "770-123-4561");
         createindiviual.clickSave();
         var selectfee = new SelectFeePage();
-        selectfee.fee();
+        selectfee.fee("Fee two");
         selectfee.continue();
         browser.sleep(3000);
         selectfee.continue();
@@ -48,9 +48,98 @@ describe('Create an Event', function () {
         var createorder = new CreateAnOrderPage();
         createorder.paymentType("Credit Card");
         createorder.creditCardPayment("41111111111111111", "March", "2018", "412", false);
+        browser.sleep(2000);
+        createorder.processOrder();
         var pp = new Payment360Page();
         expect(pp.isAt()).toContain("Order 360");
 
+
+    });
+
+    it('should allow a console user to create an event registration for a new Organization', function () {
+        var ch = new ConsoleHomePage();
+        ch.goToModule("Events");
+        var overviewpage = new OverviewPage();
+        overviewpage.do("Register Someone For an Event");
+        var findeventpage = new FindAnEventPage();
+        findeventpage.findEvent();
+        findeventpage.selectEvent("Automation");
+        var registerforanevent = new RegisterForAnEventPage();
+        registerforanevent.aNewOrganization();
+        registerforanevent.continue();
+        var neworg = new OrganizationDataEntry();
+        neworg.enterBasicInformation("PC Industries", "PC Industries", "770-123-4567");
+        neworg.save();
+        var selectfee = new SelectFeePage();
+        selectfee.fee("Fee two");
+        selectfee.continue();
+        browser.sleep(3000);
+        selectfee.continue();
+        browser.sleep(3000);
+        var createorder = new CreateAnOrderPage();
+        createorder.paymentType("Credit Card");
+        createorder.creditCardPayment("41111111111111111", "March", "2018", "412", false);
+        browser.sleep(2000);
+        createorder.processOrder();
+        var pp = new Payment360Page();
+        expect(pp.isAt()).toContain("Order 360");
+
+    });
+
+    it('should allow a console user to create an event registration for an Individual that exist in the system', function () {
+        var ch = new ConsoleHomePage();
+        ch.goToModule("Events");
+        var overviewpage = new OverviewPage();
+        overviewpage.do("Register Someone For an Event");
+        var findeventpage = new FindAnEventPage();
+        findeventpage.findEvent();
+        findeventpage.selectEvent("Automation");
+        var registerforanevent = new RegisterForAnEventPage();
+        registerforanevent.individualWhoAlreadyExist("blah blah");
+        browser.sleep(2000);
+        registerforanevent.continue();
+        var selectfee = new SelectFeePage();
+        selectfee.fee("Fee two");
+        selectfee.continue();
+        browser.sleep(3000);
+        selectfee.continue();
+        browser.sleep(3000);
+        var createorder = new CreateAnOrderPage();
+        createorder.paymentType("Credit Card");
+        createorder.creditCardPayment("41111111111111111", "March", "2018", "412", false);
+        browser.sleep(2000);
+        createorder.processOrder();
+        var pp = new Payment360Page();
+        expect(pp.isAt()).toContain("Order 360");
+
+    });
+
+    it('should allow a console user to create an event registration for an Organization that exist in the system', function () {
+        var ch = new ConsoleHomePage();
+        ch.goToModule("Events");
+        var overviewpage = new OverviewPage();
+        overviewpage.do("Register Someone For an Event");
+        var findeventpage = new FindAnEventPage();
+        findeventpage.findEvent();
+        findeventpage.selectEvent("Automation");
+        var registerforanevent = new RegisterForAnEventPage();
+        registerforanevent.organizationWhoAlreadyExist("Merzoirmur");
+        browser.sleep(2000);
+        registerforanevent.continue();
+        browser.sleep(2000);
+        var selectfee = new SelectFeePage();
+        selectfee.fee("Fee two");
+        selectfee.continue();
+        browser.sleep(3000);
+        selectfee.continue();
+        browser.sleep(3000);
+        var createorder = new CreateAnOrderPage();
+        createorder.paymentType("Credit Card");
+        createorder.creditCardPayment("41111111111111111", "March", "2018", "412", false);
+        browser.sleep(2000);
+        createorder.processOrder();
+        var pp = new Payment360Page();
+        expect(pp.isAt()).toContain("Order 360");
 
     });
 
